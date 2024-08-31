@@ -1,7 +1,8 @@
-# NIS Docker
+# NEM Docker
 
-Customized Docker files provided by the [core team](https://github.com/NemProject/nem-docker).
-Customized Docker files provided by the [Yoshiyuki IEYAMA](https://github.com/44uk/nem-docker).
+Referenced docker file.
+- https://github.com/NemProject/nem-docker
+- https://github.com/44uk/nem-docker
 
 To participate in the [Supernode Program](https://docs.nem.io/pages/Guides/supernode-program/docs.en.html), please see below.
 
