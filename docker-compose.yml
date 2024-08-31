@@ -1,0 +1,23 @@
+services:
+  nis:
+    container_name: nis
+    build: ./.docker/nis
+    ports:
+      - "7778:7778"
+      - "7890:7890"
+    restart: always
+    stop_signal: SIGINT
+    volumes:
+      - ./data:/root/nem:rw
+      - ./.docker/nis/config-user.properties:/work/package/nis/config-user.properties:ro
+  servant:
+    container_name: servant
+    build: ./.docker/servant
+    ports:
+      - "7880:7880"
+    restart: always
+    stop_signal: SIGKILL
+    volumes:
+      - ./.docker/servant/config.properties:/work/servant/config.properties:ro
+    depends_on:
+      - nis
