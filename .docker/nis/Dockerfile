@@ -3,14 +3,14 @@ FROM ubuntu:20.04
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
 RUN apt update
-RUN apt install -y --no-install-recommends curl tar unzip openjdk-11-jre-headless
+RUN apt install -y --no-install-recommends curl tar unzip openjdk-11-jre-headless maven git
 RUN apt clean
 
 WORKDIR /work
 
-RUN curl https://bob.nem.ninja/nis-0.6.101.tgz -o nis-0.6.101.tgz
-RUN tar -zxvf nis-0.6.101.tgz
-RUN rm nis-0.6.101.tgz
+RUN git clone https://github.com/NemProject/nem.git -b v0.6.102 nis1
+RUN cd nis1/infra && ./package.build.sh
+RUN cd nis1/infra && ./package.prepare.sh
 RUN chmod +x package/nix.runNis.sh
 
 EXPOSE 7778
