@@ -39,10 +39,16 @@ Build and start the docker container:
 
 ```bash
 $ docker-compose up -d
-$ docker-compose down
 ```
 
 ```bash
 $ curl http://localhost:7890/node/extended-info
 $ curl http://localhost:7890/chain/height
+```
+
+Rebuild and start the docker container:
+
+```bash
+$ docker-compose down
+$ docker-compose up --build
 ```
