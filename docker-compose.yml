@@ -9,7 +9,7 @@ services:
     stop_signal: SIGINT
     volumes:
       - ./data:/root/nem:rw
-      - ./.docker/nis/config-user.properties:/work/package/nis/config-user.properties:ro
+      - ./.docker/nis/config-user.properties:/package/nis/config-user.properties:ro
   servant:
     container_name: servant
     build: ./.docker/servant
