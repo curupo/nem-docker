@@ -11,7 +11,6 @@ RUN tar -zxvf nis-0.6.102.tgz
 RUN rm nis-0.6.102.tgz
 
 RUN chmod +x package/nix.runNis.sh
-RUN cp -r package /package
 
 EXPOSE 7778
 EXPOSE 7890
