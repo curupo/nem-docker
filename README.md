@@ -41,7 +41,7 @@ vi .docker/servant/config.properties
 Build and start the docker container:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ```bash
