@@ -16,8 +16,11 @@ To participate in the [Supernode Program](https://docs.nem.io/pages/Guides/super
 Clone [this repository](https://github.com/curupo/nem-docker):
 
 ```bash
-$ git clone https://github.com/curupo/nem-docker.git
-$ cd nem-docker
+git clone https://github.com/curupo/nem-docker.git
+```
+
+```bash
+cd nem-docker
 ```
 
 ## How to run
@@ -26,29 +29,29 @@ The required values must be set. See the [documentation](https://docs.nem.io/pag
 
 
 ```text
-$ vi .docker/nis/config-user.properties
+vi .docker/nis/config-user.properties
 ```
 
 If you are participating in the Supernode Program, you will also need the following:
 
 ```text
-$ vi .docker/servant/config.properties
+vi .docker/servant/config.properties
 ```
 
 Build and start the docker container:
 
 ```bash
-$ docker-compose up -d
+docker-compose up -d
 ```
 
 ```bash
-$ curl http://localhost:7890/node/extended-info
-$ curl http://localhost:7890/chain/height
+curl http://localhost:7890/node/extended-info | jq
+curl http://localhost:7890/chain/height | jq
 ```
 
 Rebuild and start the docker container:
 
 ```bash
-$ docker-compose down
-$ docker-compose up --build
+docker compose down
+docker compose up --build
 ```
