@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:24.04
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
 
@@ -17,4 +17,4 @@ EXPOSE 7890
 
 WORKDIR /package/nis
 ENTRYPOINT [ "java", "-cp", ".:./*:../libs/*", "org.nem.deploy.CommonStarter" ]
-CMD [ "-Xms4G", "-Xmx6G" ]
+CMD [ "-Xms4G", "-Xmx4G" ]
