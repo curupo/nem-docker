@@ -1,9 +1,7 @@
-FROM ubuntu:20.04
-
-RUN ln -sf /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+FROM ubuntu:26.04
 
 RUN apt update
-RUN apt install -y --no-install-recommends curl tar unzip openjdk-11-jre-headless
+RUN apt install -y --no-install-recommends curl unzip openjdk-11-jre-headless
 RUN apt clean
 
 WORKDIR /work
