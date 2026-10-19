@@ -15,4 +15,4 @@ EXPOSE 7890
 
 WORKDIR /package/nis
 ENTRYPOINT [ "java", "-cp", ".:./*:../libs/*", "org.nem.deploy.CommonStarter" ]
-CMD [ "-Xms4G", "-Xmx4G" ]
+CMD [ "-Xms8G", "-Xmx8G" ]
