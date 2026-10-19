@@ -45,13 +45,14 @@ docker compose up -d
 ```
 
 ```bash
-curl http://localhost:7890/node/extended-info | jq
-curl http://localhost:7890/chain/height | jq
+ip addr
+curl http://172.17.0.1:7890/node/extended-info | jq
+curl http://172.17.0.1:7890/chain/height | jq
 ```
 
 Rebuild and start the docker container:
 
 ```bash
 docker compose down
-docker compose up --build
+docker compose up --build -d
 ```
