@@ -18,6 +18,6 @@ services:
     restart: always
     stop_signal: SIGKILL
     volumes:
-      - ./.docker/servant/config.properties:/work/servant/config.properties:ro
+      - ./.docker/servant/config.properties:/servant/config.properties:ro
     depends_on:
       - nis
